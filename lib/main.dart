@@ -14,15 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
       routes: {
-        "/" :(context) => Login(),
-        "/login":(context) => Login(),
-        "/homepage":(context) => Homepage(),
+        "/": (context) => Homepage(),
+        "/login": (context) => Login(),
+        "/homepage": (context) => Homepage(),
       },
     );
   }
