@@ -5,6 +5,7 @@ import 'package:project_1/pages/login.dart';
 import 'package:project_1/utils/routes.dart';
 import 'pages/home_page.dart';
 import 'pages/login.dart';
+import 'widgets/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,14 +19,8 @@ class MyApp extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        // fontFamily: GoogleFonts.lato().fontFamily,
-        textTheme: GoogleFonts.latoTextTheme(textTheme),
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.light,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       routes: {
         "/": (context) => Login(),
         MyRoutes.loginRoute: (context) => Login(),
